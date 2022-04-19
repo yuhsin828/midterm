@@ -9,9 +9,15 @@
 .wz-100{
     width: 100px;
 }
+.wz-280{
+    width: 280px;
+}
 
 .hz-50{
     height: 50px;
+}
+.hz-280{
+    height: 280px;
 }
 .hz-200{
     height: 200px;
@@ -99,10 +105,6 @@ aside .nav .nav-item .nav-link:hover{
     border-bottom: 2px solid #41a1d5;
 }
 
-.object-fit-cover{
-    object-fit: cover;
-}
-
 .footer1 .nav-link:hover{
     color:#a4aab0 !important;
 }
@@ -121,10 +123,10 @@ aside .nav .nav-item .nav-link:hover{
     color:#f8f9fa !important;
 }
 
-section .row .img{
+/* .img{
     position: relative;
-}
-section .row .img::before{
+} */
+.img::before{
     position: absolute;
     top: -5px;
     left: 0;
@@ -134,7 +136,7 @@ section .row .img::before{
     width: calc(100% - 20px);
     border-top: 2px solid gray;
 }
-section .row .img::after{
+.img::after{
     position: absolute;
     top: -8px;
     left: 0;
@@ -145,6 +147,9 @@ section .row .img::after{
     border-top: 0.5px solid gray;
 }
 
+.object-fit-cover{
+    object-fit: cover;
+}
 .img{
     position: absolute;
     width: 100%;
@@ -160,8 +165,15 @@ section .row .img::after{
     padding: 20px;
     box-sizing: border-box;
 }
+.info .line3{
+    display: none;
+}
+.imgbox:hover .info .line3{
+    display: block;
+    /* color:#f8f9fa; */
+}
 
-.img1{
+/* .img1{
     background-image: url("../images/section/pexels-alex-green-5693382.jpg")
 }
 .img2{
@@ -190,4 +202,4 @@ section .row .img::after{
 }
 .img10{
     background-image: url("../images/section/pexels-jonathan-borba-3763578.jpg")
-}
+} */
