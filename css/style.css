@@ -1,0 +1,193 @@
+::selection {
+    color: #f8f9fa;
+    background: #212529;
+}
+
+.wz-85{
+    width: 85px;
+}
+.wz-100{
+    width: 100px;
+}
+
+.hz-50{
+    height: 50px;
+}
+.hz-200{
+    height: 200px;
+}
+.hz-250{
+    height: 250px;
+}
+.m-hz-1000{
+    height: 1000px;
+}
+
+.topz-50{
+    top:50px;
+}
+
+.z1{
+    z-index: 1;
+}
+.z2{
+    z-index: 2;
+}
+
+.fz-14{
+    font-size: 14px;
+}
+.fz-16{
+    font-size: 16px;
+}
+.fz-20{
+    font-size: 20px;
+}
+.fz-28{
+    font-size: 28px;
+}
+
+.bg-flickrdark{
+    background-color: #202023;
+}
+.bg-flickrlight{
+    background-color: #d0d0d1;
+}
+
+.icon-flickr_logo_dots{
+    width: 110px;
+    height: 50px;
+}
+
+nav .nav-item .nav-link:hover{
+    color:#a4aab0 !important;
+}
+nav .nav-item:hover .nav-link{
+    color:#a4aab0 !important;
+}
+.nav-item-1:hover .dropdown-menu{
+    display: block;
+}
+.nav-item-1 .dropdown-menu{
+    position: relative;
+}
+.nav-item-1 .dropdown-menu::after{
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #fff transparent;
+}
+nav .hover-color:hover{
+    color:#a4aab0 !important;
+}
+
+header{
+    background-image: url(../images/header.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+aside .nav .nav-item .active{
+    border-bottom: 2px solid #0090DC;
+}
+aside .nav .nav-item .nav-link:hover{
+    border-bottom: 2px solid #41a1d5;
+}
+
+.object-fit-cover{
+    object-fit: cover;
+}
+
+.footer1 .nav-link:hover{
+    color:#a4aab0 !important;
+}
+.footer1 .dropdown-menu::after{
+    position: absolute;
+    top: 299px;
+    left: 80px;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #fff transparent transparent transparent;
+}
+.footer2 .nav-link:hover{
+    color:#f8f9fa !important;
+}
+
+section .row .img{
+    position: relative;
+}
+section .row .img::before{
+    position: absolute;
+    top: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    width: calc(100% - 20px);
+    border-top: 2px solid gray;
+}
+section .row .img::after{
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    width: calc(100% - 20px);
+    border-top: 0.5px solid gray;
+}
+
+.img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+.info{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    /* height: 100%; */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.img1{
+    background-image: url("../images/section/pexels-alex-green-5693382.jpg")
+}
+.img2{
+    background-image: url("../images/section/pexels-andrea-piacquadio-3768164.jpg")
+}
+.img3{
+    background-image: url("../images/section/pexels-andrea-piacquadio-3820120.jpg")
+}
+.img4{
+    background-image: url("../images/section/pexels-august-de-richelieu-4259138.jpg")
+}
+.img5{
+    background-image: url("../images/section/pexels-august-de-richelieu-4259707.jpg")
+}
+.img6{
+    background-image: url("../images/section/pexels-august-de-richelieu-4260096.jpg")
+}
+.img7{
+    background-image: url("../images/section/pexels-elina-fairytale-3806953.jpg")
+}
+.img8{
+    background-image: url("../images/section/pexels-elina-fairytale-3807337.jpg")
+}
+.img9{
+    background-image: url("../images/section/pexels-ivan-samkov-4624879.jpg")
+}
+.img10{
+    background-image: url("../images/section/pexels-jonathan-borba-3763578.jpg")
+}
