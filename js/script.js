@@ -8,15 +8,51 @@ $(document).ready(function () {
     });
 });
 
+
+
+// var url = 'https://script.google.com/macros/s/AKfycbyAdQ9c8vbq4W2amts6CfrIc_bz49QOULzWICPUibuRlOfSMvxG67uYE5ZZQOY8AjmJ/exec';
+// let param = {};
+// param.method = 'getFakeAPI';
+// param.uid = '110819018';
+// param.token = 'sCNmJc58HxJw1p';
+// param.id = "110819018";
+// $.post(url, parameter, function(data) {
+//   console.log("success");
+//   console.log(data);
+//   initPage(data);
+// }).fail(function() {
+//   console.log("fail");
+// });
+
+
+// var url = "";
+// var parameter = {};
+// var jqxhr = $.post(url, parameter, function(data) {
+//   console.log("success");
+//   console.log(data);
+//   initPage(data);
+// })
+// .done(function(data) {
+//   console.log( "second success");
+//   console.log(data)
+// })
+// .fail(function() {
+//   console.log( "error" );
+// })
+// .always(function() {
+//   console.log( "finished" );
+// });
+
+
 function t01(ID_HERE, TEXT_HERE) {
     let html =
     `
-        <div class="col-3 pt-3">
-            <div class="imgbox position-relative hz-280 wz-280">
-                <div class="img position-absolute">
+        <div class="col-xl-3 col-md-4 col-sm-6 pt-3">
+            <div class="imgbox position-relative hz-280">
+                <a class="img position-absolute" href="./album.html">
                     <img src="https://images.pexels.com/photos/${ID_HERE}/pexels-photo-${ID_HERE}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
                         class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
-                </div>
+                </a>
                 <div class="info position-absolute fz-16 py-0">
                     <div class="line line1">${TEXT_HERE}</div>
                     <div class="line line2">N張相片，NNN次檢視</div>

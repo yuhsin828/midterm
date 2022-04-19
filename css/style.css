@@ -123,9 +123,6 @@ aside .nav .nav-item .nav-link:hover{
     color:#f8f9fa !important;
 }
 
-/* .img{
-    position: relative;
-} */
 .img::before{
     position: absolute;
     top: -5px;
@@ -173,33 +170,6 @@ aside .nav .nav-item .nav-link:hover{
     /* color:#f8f9fa; */
 }
 
-/* .img1{
-    background-image: url("../images/section/pexels-alex-green-5693382.jpg")
+.albumnav .nav-item .active{
+    color:#0090DC !important;
 }
-.img2{
-    background-image: url("../images/section/pexels-andrea-piacquadio-3768164.jpg")
-}
-.img3{
-    background-image: url("../images/section/pexels-andrea-piacquadio-3820120.jpg")
-}
-.img4{
-    background-image: url("../images/section/pexels-august-de-richelieu-4259138.jpg")
-}
-.img5{
-    background-image: url("../images/section/pexels-august-de-richelieu-4259707.jpg")
-}
-.img6{
-    background-image: url("../images/section/pexels-august-de-richelieu-4260096.jpg")
-}
-.img7{
-    background-image: url("../images/section/pexels-elina-fairytale-3806953.jpg")
-}
-.img8{
-    background-image: url("../images/section/pexels-elina-fairytale-3807337.jpg")
-}
-.img9{
-    background-image: url("../images/section/pexels-ivan-samkov-4624879.jpg")
-}
-.img10{
-    background-image: url("../images/section/pexels-jonathan-borba-3763578.jpg")
-} */
