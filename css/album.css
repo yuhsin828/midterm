@@ -16,14 +16,20 @@
 .hz-50{
     height: 50px;
 }
-.hz-280{
-    height: 280px;
-}
 .hz-200{
     height: 200px;
 }
 .hz-250{
     height: 250px;
+}
+.hz-280{
+    height: 280px;
+}
+.hz-320{
+    height: 320px;
+}
+.hz-480{
+    height: 480px;
 }
 .m-hz-1000{
     height: 1000px;
@@ -40,6 +46,9 @@
     z-index: 2;
 }
 
+.fz-12{
+    font-size: 12px;
+}
 .fz-14{
     font-size: 14px;
 }
@@ -92,19 +101,19 @@ nav .hover-color:hover{
     color:#a4aab0 !important;
 }
 
-header{
-    background-image: url(../images/header.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-color: rgba(0, 0, 0, .5);
-    background-blend-mode: multiply;
+header .black-mask{
+    background-color: rgba(0, 0, 0, .6);
+}
+header .info{
+    position: absolute;
+    top: 80px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-aside .nav .nav-item .active{
-    border-bottom: 2px solid #0090DC;
-}
-aside .nav .nav-item .nav-link:hover{
-    border-bottom: 2px solid #41a1d5;
+aside .nav-item .active{
+    color:#0090DC !important;
 }
 
 .footer1 .nav-link:hover{
@@ -125,27 +134,6 @@ aside .nav .nav-item .nav-link:hover{
     color:#f8f9fa !important;
 }
 
-.img::before{
-    position: absolute;
-    top: -5px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    content: "";
-    width: calc(100% - 20px);
-    border-top: 2px solid gray;
-}
-.img::after{
-    position: absolute;
-    top: -8px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    content: "";
-    width: calc(100% - 20px);
-    border-top: 0.5px solid gray;
-}
-
 .object-fit-cover{
     object-fit: cover;
 }
@@ -156,16 +144,14 @@ aside .nav .nav-item .nav-link:hover{
     background-size: cover;
     background-position: center center;
 }
-.info{
+section .info{
     position: absolute;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
     background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .5));
-}
-.info .line3{
     display: none;
 }
-.imgbox:hover .info .line3{
+.imgbox:hover .info{
     display: block;
 }

@@ -95,12 +95,12 @@
         <div class="container h-100 pb-3">
             <div class="row h-100 d-flex align-items-end">
                 <div class="col-xl-2 col-md-12">
-                    <img class="wz-100 rounded-circle" src="https://randomuser.me/api/portraits/women/90.jpg">
+                    <img class="wz-100 rounded-circle img-fluid" src="https://randomuser.me/api/portraits/women/90.jpg">
                 </div>
                 <div class="col-xl-8 col-md-8 text-light">
                     <div class="fz-28">Lois Ellis</div>
                     <div class="fz-16 d-flex">
-                        <div class="pe-3"><i class="fa fa-gift fz-20" aria-hidden="true"></i>送贈 Pro</div>
+                        <div class="pe-3"><i class="fa fa-gift fz-20 mx-1" aria-hidden="true"></i>送贈 Pro</div>
                         <div class="pe-3">1.8K 個追蹤者</div>
                         <div class="pe-3">正在追蹤 210 個人</div>
                     </div>
@@ -136,7 +136,21 @@
     <section class="">
         <div class="container">
             <div class="row my-5">
-
+                <div class="col-xl-3 col-md-4 col-sm-6 pt-3">
+                    <div class="imgbox position-relative hz-280">
+                        <a class="img position-absolute" href="./album.html?ALBUM_ID">
+                            <img src="./images/section/pexels-alex-green-5693382.jpg" class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
+                        </a>
+                        <div class="info position-absolute fz-14 p-2 text-light">
+                            <div class="line line1">ALBUM_NAME</div>
+                            <div class="line line2">PHOTO_NUM張相片，VIEW_NUM次檢視</div>
+                            <div class="line line3 text-end">
+                                <a href="#"><i class="fa fa-share mx-1 text-light"></i></a>
+                                <a href="#"><i class="fa fa-download mx-1 text-light"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -220,20 +234,21 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 <template id="t01" style="display: none;">
     <div class="col-xl-3 col-md-4 col-sm-6 pt-3">
         <div class="imgbox position-relative hz-280">
-            <a class="img position-absolute" href="./album.html">
+            <a class="img position-absolute" href="./album.html?ALBUM_ID">
                 <img src="IMG_HERE" class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
             </a>
-            <div class="info position-absolute fz-16 py-0">
-                <div class="line line1">TEXT_HERE</div>
-                <div class="line line2">N張相片，NNN次檢視</div>
-                <div class="line line3">
-                    <i class="fa fa-share"></i>
-                    <i class="fa fa-download"></i>
+            <div class="info position-absolute fz-14 p-2 text-light">
+                <div class="line line1">ALBUM_NAME</div>
+                <div class="line line2">PHOTO_NUM張相片，VIEW_NUM次檢視</div>
+                <div class="line line3 text-end">
+                    <a href="#"><i class="fa fa-share mx-1 text-light"></i></a>
+                    <a href="#"><i class="fa fa-download mx-1 text-light"></i></a>
                 </div>
             </div>
         </div>
