@@ -3,7 +3,8 @@
 // let textAry = ['album1', 'album2', 'album3', 'album4', 'album5', 'album6', 'album7', 'album8', 'album9', 'album10', 'album11', 'album12', 'album13', 'album14', 'album15', 'album16', 'album17', 'album18', 'album19', 'album20'];
 var url = 'https://script.google.com/macros/s/AKfycbyAdQ9c8vbq4W2amts6CfrIc_bz49QOULzWICPUibuRlOfSMvxG67uYE5ZZQOY8AjmJ/exec';
 
-let pageID = document.location.toString().split('?')[1];
+let pageID = [110813032, 110813038, 110819003, 110819006, 110819008, 110819009, 110819011, 110819012, 110819016, 110819018, 110819019, 110819020, 110819033, 110819038, 110819039]
+// let pageID = document.location.toString().split('?')[1];
 
 $(document).ready(function () {
     // imgAry.map(function (value, index) {
@@ -17,25 +18,34 @@ function getData() {
     param.method = 'getFakeAPI';
     param.uid = '110819018';
     param.token = 'smXciVKZ1fMyUb';
-    param.id = pageID;
-    $.post(url, param, function (data, textStatus, xhr) {
-        console.log("success");
-        console.log(data);
-        // initPage(data);
-    }).fail(function () {
-        console.log("fail");
-        console.log(data);
-    });
+    for (let i = 0; i < pageID.length; i++) {
+        param.id = pageID[i];//pageID
+        $.post(url, param, function (data) {
+            console.log("success");
+            console.log(data);
+            let ALBUM_ID = data.data.ID;
+            let ALBUM_IMGURL = data.data.imgurl;
+            let ALBUM_NAME = data.data.name;
+            let PHOTO_NUM = data.data.photoNum;
+            let VIEW_NUM = data.data.viewNum;
+            let content = t01(ALBUM_ID, ALBUM_IMGURL, ALBUM_NAME, PHOTO_NUM, VIEW_NUM);
+            $('section .row').append(content);
+            // initPage(data);
+        }).fail(function () {
+            console.log("fail");
+            console.log(data);
+        })
+    }
+    ;
 }
 
-function t01(ALBUM_ID, IMG_ID, ALBUM_NAME, PHOTO_NUM, VIEW_NUM) {
+function t01(ALBUM_ID, ALBUM_IMGURL, ALBUM_NAME, PHOTO_NUM, VIEW_NUM) {
     let html =
         `
         <div class="col-xl-3 col-md-4 col-sm-6 pt-3">
             <div class="imgbox position-relative hz-280">
                 <a class="img position-absolute" href="./album.html?${ALBUM_ID}">
-                    <img src="https://images.pexels.com/photos/${IMG_ID}/pexels-photo-${IMG_ID}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                        class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
+                    <img src="https://images.pexels.com/photos/${ALBUM_IMGURL}/pexels-photo-${ALBUM_IMGURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
                 </a>
                 <div class="info position-absolute fz-16 p-2 text-light">
                     <div class="line line1">${ALBUM_NAME}</div>
@@ -47,7 +57,6 @@ function t01(ALBUM_ID, IMG_ID, ALBUM_NAME, PHOTO_NUM, VIEW_NUM) {
                 </div>
             </div>
         </div>
-
     `;
     return html;
 }

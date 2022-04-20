@@ -117,7 +117,7 @@
     </aside>
     <header class="hz-480">
         <div class="container h-100">
-            <div class="row h-100 position-relative">
+            <!-- <div class="row h-100 position-relative">
                 <img src="./images/header.jpg" class="h-100 object-fit-cover position-absolute p-0 img-fluid" alt="">
                 <div class="black-mask h-100 position-absolute"></div>
                 <div class="info position-absolute text-light text-center m-auto">
@@ -132,15 +132,15 @@
                         <a href="">AUTHOR_IMG<img src="https://randomuser.me/api/portraits/women/90.jpg"
                                 class="wz-85 rounded-circle img-fluid" alt=""></a>
                     </div>
-                    <div class="fz-14">相片擁有者:AUTHOR</div>
+                    <div class="fz-14">相片擁有者:ALBUM_AUTHOR</div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </header>
     <section class="">
         <div class="container">
             <div class="row mb-5">
-                <div class="col-xl-4 col-md-6 pt-1 px-1">
+                <!-- <div class="col-xl-4 col-md-6 pt-1 px-1">
                     <div class="imgbox position-relative hz-320">
                         <a class="img position-absolute" href="#">
                             <img src="./images/section/pexels-alex-green-5693382.jpg"
@@ -155,7 +155,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -241,12 +241,32 @@
     <script src="./js/album.js"></script>
 </body>
 
-<template id="t02" style="display: none;">
+<template id="theader" style="display: none;">
+    <div class="row h-100 position-relative">
+        <img src="ALBUM_IMGURL" class="h-100 object-fit-cover position-absolute p-0 img-fluid" alt="">
+        <div class="black-mask h-100 position-absolute"></div>
+        <div class="info position-absolute text-light text-center m-auto">
+            <div class="fz-28 pb-2">ALBUM_NAME</div>
+            <div class="fz-20 pb-2">ALBUM_INFO</div>
+            <div class="fz-14 pb-2">PHOTO_NUM張相片，VIEW_NUM次檢視</div>
+            <div class="fz-16 pb-3">
+                <a href="#" class="text-light"><i class="fa fa-share mx-1"></i></a>
+                <a href="#" class="text-light"><i class="fa fa-download mx-1"></i></a>
+            </div>
+            <div class="">
+                <a href="#"><img src="AUTHOR_IMG"
+                        class="wz-85 rounded-circle img-fluid" alt=""></a>
+            </div>
+            <div class="fz-14">相片擁有者:ALBUM_AUTHOR</div>
+        </div>
+    </div>
+</template>
+
+<template id="tsection" style="display: none;">
     <div class="col-xl-4 col-md-6 pt-1 px-1">
         <div class="imgbox position-relative hz-320">
             <a class="img position-absolute" href="#">
-                <img src="IMG_HERE"
-                    class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
+                <img src="OBJ_IMURL" class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
             </a>
             <div class="info position-absolute fz-12 text-light p-2">
                 <div class="line">OBJ_TITLE</div>
@@ -259,4 +279,5 @@
         </div>
     </div>
 </template>
+
 </html>
