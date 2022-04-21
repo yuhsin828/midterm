@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/album_field.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <title>Album | </title>
+</head>
+
+<body>
+    <svg width="0" height="0" style="position:absolute">
+        <symbol viewBox="0 0 204 45" id="icon-flickr_logo_dots">
+            <g fill="none" fill-rule="evenodd">
+                <path fill="#FF0084"
+                    d="M35 33c5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10s-10 4.478-10 10c0 5.523 4.477 10 10 10">
+                </path>
+                <path fill="#0063DC"
+                    d="M10 33c5.523 0 10-4.477 10-10 0-5.522-4.477-10-10-10S0 17.478 0 23c0 5.523 4.477 10 10 10">
+                </path>
+                <path fill="#FFF"
+                    d="M134.725 13.31c3.121 0 5.896.53 8.264 1.691l-.754 7.67c-1.909-1.16-3.809-1.68-6.294-1.68-4.508 0-7.972 3.14-7.972 8.371 0 4.818 4.041 7.96 8.55 7.96 2.368 0 4.736-.522 6.47-1.452l.23 7.79c-2.598.87-5.718 1.34-8.494 1.34-9.933 0-17.5-5.819-17.5-15.818 0-10.06 7.567-15.872 17.5-15.872zm65.756 0c1.21 0 2.483.172 3.52.352l-.519 8.719c-1.155-.352-2.309-.352-3.523-.352-4.852 0-7.57 3.552-7.57 9.483V44.3h-10.39V14.01h9.471v5.582h.112c1.793-3.841 4.394-6.281 8.899-6.281zM157.947.692v26.05h.112l8.666-12.73h11.377l-10.45 13.898 11.316 16.39H166.38l-8.32-15h-.112v15H147.55V.691h10.398zm-59.498 0V44.3H88.051V.691h10.4zm15.49 13.32v30.288h-10.392V14.01h10.392zM78.807 0c2.254 0 3.988.35 5.314.58l-.637 7.21c-.864-.292-1.73-.47-3.293-.47-2.655 0-3.69 1.861-3.69 4.831v1.858h7.391v7.32H76.5V44.3H66.1V21.33h-6.12v-7.32h6.296v-1.858C66.276 3.142 70.491 0 78.807 0zm35.133 1.39v7.68h-10.392V1.39h10.392z">
+                </path>
+            </g>
+        </symbol>
+    </svg>
+    <nav class="navbar navbar-expand-lg bg-flickrdark hz-50 position-sticky top-0 z2">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <svg class="icon icon-flickr_logo_dots" id="yui_3_16_0_1_1646555441080_17669">
+                    <use xlink:href="#icon-flickr_logo_dots" id="yui_3_16_0_1_1646555441080_17672"></use>
+                </svg>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item nav-item-1 dropdown mx-3">
+                        <a class="nav-link text-light px-1" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            發掘
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item fz-16" href="#">最新相片</a></li>
+                            <li><a class="dropdown-item fz-16" href="#">熱門相片</a></li>
+                            <li><a class="dropdown-item fz-16" href="#">活動</a></li>
+                            <li><a class="dropdown-item fz-16" href="#">公眾相簿計畫</a></li>
+                            <li><a class="dropdown-item fz-16" href="#">Flickr 博覽館</a></li>
+                            <li><a class="dropdown-item fz-16" href="#">世界地圖</a></li>
+                            <li><a class="dropdown-item fz-16" href="#">相片搜尋器</a></li>
+                            <li><a class="dropdown-item fz-16" href="#">Flickr Blog</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item nav-item-1 dropdown mx-3">
+                        <a class="nav-link text-light px-1" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            印刷品
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item fz-16" href="#">印刷品和掛牆藝術</a></li>
+                            <li><a class="dropdown-item fz-16" href="#">實體相簿</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link text-light px-1" href="#">購買pro</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <div class="group position-relative mx-1">
+                        <a class="" href="#">
+                            <i class="fa fa-search text-secondary position-absolute mt-2 mx-2" aria-hidden="true"></i>
+                        </a>
+                        <input class="form-control me-1 ps-4 rounded-1 bg-flickrlight fz-14" type="search"
+                            placeholder="相片、人物或群組" aria-label="Search">
+                    </div>
+                    <a class="mx-1" href="#">
+                        <i class="fa fa-cloud-upload text-light fz-28 mt-1 mx-2 hover-color" aria-hidden="true"></i>
+                    </a>
+                    <button type="button" class="btn btn-sm wz-85 text-light mx-1 hover-color">登入</button>
+                    <button type="button" class="btn btn-primary btn-sm wz-85 mx-1 hover-color">註冊</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <aside class="bg-white border border-top-0 border-end-0 border-start-0 position-sticky topz-50 z1">
+        <div class="container">
+            <ul class="nav d-flex justify-content-between">
+                <li class="nav-item">
+                    <a class="nav-link text-dark px-2 mx-2 fz-20" href="./index.html"><i
+                            class="fa fa-long-arrow-left mx-2" aria-hidden="true"></i>返回相簿清單</a>
+                </li>
+                <div class="d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary px-2 mx-2 fz-20" href="#"><i class="fa fa-play"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary px-2 mx-2 fz-20" href="#"><i class="fa fa-th-large"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary px-2 mx-2 fz-20 active" href="#"><i class="fa fa-square"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </aside>
+    <header class="hz-480">
+        <div class="container h-100">
+            <div class="row h-100 position-relative headerimg">
+                <div class="black-mask h-100 position-absolute"></div>
+                <div class="info position-absolute text-light text-center m-auto">
+                    <!-- <div class="fz-28 pb-2">ALBUM_NAME</div>
+                    <div class="fz-20 pb-2">ALBUM_INFO</div>
+                    <div class="fz-14 pb-2">PHOTO_NUM張相片，VIEW_NUM次檢視</div>
+                    <div class="fz-16 pb-3">
+                        <a href="#" class="text-light"><i class="fa fa-share mx-1"></i></a>
+                        <a href="#" class="text-light"><i class="fa fa-download mx-1"></i></a>
+                    </div>
+                    <div class="">
+                        <a href="#"><img src="AUTHOR_IMG" class="wz-85 rounded-circle img-fluid pb-2" alt=""></a>
+                    </div>
+                    <div class="fz-14">相片擁有者：ALBUM_AUTHOR</div> -->
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="">
+        <div class="container mt-1 p-0">
+            <div class="row g-0 mb-1">
+                <div class="col-12 col-md-8 hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field1">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 hz-300">
+                    <div class="h-100 field position-relative field2">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 mb-1">
+                <div class="col-12 col-md-4 hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field3">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field4">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 hz-300">
+                    <div class="h-100 field position-relative field5">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 mb-1">
+                <div class="col-12 col-md-3 hz-400 pe-1 mb-1">
+                    <div class="h-100 field position-relative field6">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 hz-400">
+                    <div class="h-100 field position-relative field7">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 mb-1">
+                <div class="col-12 col-md hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field8">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field9">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md hz-300">
+                    <div class="h-100 field position-relative field10">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 mb-1">
+                <div class="col-12 col-md-8 hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field11">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 hz-300">
+                    <div class="h-100 field position-relative field12">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 mb-1">
+                <div class="col-12 col-md-4 hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field13">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-5 hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field14">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 hz-300">
+                    <div class="h-100 field position-relative field15">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 mb-1">
+                <div class="col-12 col-md-3 hz-400 pe-1 mb-1">
+                    <div class="h-100 field position-relative field16">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-9 hz-400">
+                    <div class="h-100 field position-relative field17">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 mb-1">
+                <div class="col-12 col-md hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field18">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md hz-300 pe-1 mb-1">
+                    <div class="h-100 field position-relative field19">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md hz-300">
+                    <div class="h-100 field position-relative field20">
+                        <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn"
+                            data-wow-duration="0.5s">
+                            <div class="line1"> </div>
+                            <div class="line d-flex justify-content-between">
+                                <div class="line2">相片擁有者： </div>
+                                <div class="line3"><i class="fa fa-star-o mx-1" aria-hidden="true"></i> </div>
+                                <div class="line4"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-flickrdark">
+        <div class="container">
+            <ul class="nav footer1 d-flex justify-content-between fz-16 p-1">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">關於</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">工作機會</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">開發人員</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">指南</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">服務中心</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">檢舉濫用</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="#">說明討論區</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">繁體中文</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item fz-14" href="#">English</a></li>
+                        <li><a class="dropdown-item fz-14" href="#">Deutsch</a></li>
+                        <li><a class="dropdown-item fz-14" href="#">Español</a></li>
+                        <li><a class="dropdown-item fz-14" href="#">Français</a></li>
+                        <li><a class="dropdown-item fz-14" href="#">한글</a></li>
+                        <li><a class="dropdown-item fz-14" href="#">Italiano</a></li>
+                        <li><a class="dropdown-item fz-14" href="#">Português</a></li>
+                        <li><a class="dropdown-item fz-14" href="#">Tiếng Việt</a></li>
+                        <li><a class="dropdown-item fz-14" href="#">Bahasa Indonesia</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="border border-top-0 border-end-0 border-start-0 border-secondary"></div>
+            <ul class="nav footer2 d-flex justify-content-between fz-16 p-1">
+                <div class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary px-0 mx-3" href="#">私隱政策</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary px-0 mx-3" href="#">服務條款</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary px-0 mx-3" href="#">Cookies</a>
+                    </li>
+                </div>
+                <div class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fz-20 px-0 mx-3" href="#"><i class="fa fa-facebook-official"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fz-20 px-0 mx-3" href="#"><i class="fa fa-twitter"
+                                aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-secondary fz-20 px-0 mx-3" href="#"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="./js/wow.js"></script>
+    <script src="./js/album_field.js"></script>
+</body>
+
+<template id="theader" style="display: none;">
+    <div class="fz-28 pb-2">ALBUM_NAME</div>
+    <div class="fz-20 pb-2">ALBUM_INFO</div>
+    <div class="fz-14 pb-2">PHOTO_NUM張相片，VIEW_NUM次檢視</div>
+    <div class="fz-16 pb-3">
+        <a href="#" class="text-light"><i class="fa fa-share mx-1"></i></a>
+        <a href="#" class="text-light"><i class="fa fa-download mx-1"></i></a>
+    </div>
+    <div class="">
+        <a href="#"><img src="AUTHOR_IMG" class="wz-85 rounded-circle img-fluid pb-2" alt=""></a>
+    </div>
+    <div class="fz-14">相片擁有者：ALBUM_AUTHOR</div>
+</template>
+
+</html>

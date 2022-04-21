@@ -38,12 +38,12 @@ function initPage(data) {
     $('header .container').append(content);
 
     for (let i = 0; i < data.data.images.length; i++) {
-        let OBJ_IMURL = data.data.images[i].imgurl;
+        let OBJ_IMGURL = data.data.images[i].imgurl;
         let OBJ_TITLE = data.data.images[i].title;
         let OBJ_AUTHOR = data.data.images[i].author;
         let LIKE_NUM = data.data.images[i].likeNum;
         let COMMENT_NUM = data.data.images[i].commentNum;
-        let content = tsection(OBJ_IMURL, OBJ_TITLE, OBJ_AUTHOR, LIKE_NUM, COMMENT_NUM);
+        let content = tsection(OBJ_IMGURL, OBJ_TITLE, OBJ_AUTHOR, LIKE_NUM, COMMENT_NUM);
         $('section .row').append(content);
     }
 }
@@ -73,13 +73,13 @@ function theader(ALBUM_IMGURL, ALBUM_NAME, ALBUM_INFO, PHOTO_NUM, VIEW_NUM, AUTH
     return html;
 }
 
-function tsection(OBJ_IMURL, OBJ_TITLE, OBJ_AUTHOR, LIKE_NUM, COMMENT_NUM) {
+function tsection(OBJ_IMGURL, OBJ_TITLE, OBJ_AUTHOR, LIKE_NUM, COMMENT_NUM) {
     let html =
         `
         <div class="col-xl-4 col-md-6 pt-1 px-1">
             <div class="imgbox position-relative hz-320">
                 <a class="img position-absolute" href="#">
-                    <img src="https://images.pexels.com/photos/${OBJ_IMURL}/pexels-photo-${OBJ_IMURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="w-100 h-100 object-fit-cover position-absolute img-fluid wow animate__animated animate__fadeIn" alt="">
+                    <img src="https://images.pexels.com/photos/${OBJ_IMGURL}/pexels-photo-${OBJ_IMGURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="w-100 h-100 object-fit-cover position-absolute img-fluid wow animate__animated animate__fadeIn" alt="">
                 </a>
                 <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn" data-wow-duration="0.5s">
                     <div class="line">${OBJ_TITLE}</div>
