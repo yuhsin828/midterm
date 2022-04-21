@@ -13,6 +13,10 @@ $(document).ready(function () {
     getData();
 });
 
+$(function() {
+    new WOW().init();
+});
+
 function getData() {
     let param = {};
     param.method = 'getFakeAPI';
@@ -45,7 +49,7 @@ function t01(ALBUM_ID, ALBUM_IMGURL, ALBUM_NAME, PHOTO_NUM, VIEW_NUM) {
         <div class="col-xl-3 col-md-4 col-sm-6 pt-3">
             <div class="imgbox position-relative hz-280">
                 <a class="img position-absolute" href="./album.html?${ALBUM_ID}">
-                    <img src="https://images.pexels.com/photos/${ALBUM_IMGURL}/pexels-photo-${ALBUM_IMGURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
+                    <img src="https://images.pexels.com/photos/${ALBUM_IMGURL}/pexels-photo-${ALBUM_IMGURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="w-100 h-100 object-fit-cover position-absolute img-fluid wow animate__animated animate__fadeIn" alt="">
                 </a>
                 <div class="info position-absolute fz-16 p-2 text-light">
                     <div class="line line1">${ALBUM_NAME}</div>

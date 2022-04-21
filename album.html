@@ -11,6 +11,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/album.css">
+    <link rel="stylesheet" href="./css/animate.css">
     <title>Flickr｜album</title>
 </head>
 
@@ -95,7 +96,7 @@
         <div class="container">
             <ul class="nav d-flex justify-content-between">
                 <li class="nav-item">
-                    <a class="nav-link text-dark px-2 mx-2 fz-20" href="./index.html"><i class="fa fa-long-arrow-left"
+                    <a class="nav-link text-dark px-2 mx-2 fz-20" href="./index.html"><i class="fa fa-long-arrow-left mx-2"
                             aria-hidden="true"></i>返回相簿清單</a>
                 </li>
                 <div class="d-flex">
@@ -238,12 +239,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="./js/wow.js"></script>
     <script src="./js/album.js"></script>
 </body>
 
 <template id="theader" style="display: none;">
     <div class="row h-100 position-relative">
-        <img src="ALBUM_IMGURL" class="h-100 object-fit-cover position-absolute p-0 img-fluid" alt="">
+        <img src="ALBUM_IMGURL" class="h-100 object-fit-cover position-absolute p-0 img-fluid wow animate__animated animate__fadeIn" alt="">
         <div class="black-mask h-100 position-absolute"></div>
         <div class="info position-absolute text-light text-center m-auto">
             <div class="fz-28 pb-2">ALBUM_NAME</div>
@@ -254,10 +256,9 @@
                 <a href="#" class="text-light"><i class="fa fa-download mx-1"></i></a>
             </div>
             <div class="">
-                <a href="#"><img src="AUTHOR_IMG"
-                        class="wz-85 rounded-circle img-fluid" alt=""></a>
+                <a href="#"><img src="AUTHOR_IMG" class="wz-85 rounded-circle img-fluid pb-2" alt=""></a>
             </div>
-            <div class="fz-14">相片擁有者:ALBUM_AUTHOR</div>
+            <div class="fz-14">相片擁有者：ALBUM_AUTHOR</div>
         </div>
     </div>
 </template>
@@ -266,14 +267,16 @@
     <div class="col-xl-4 col-md-6 pt-1 px-1">
         <div class="imgbox position-relative hz-320">
             <a class="img position-absolute" href="#">
-                <img src="OBJ_IMURL" class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
+                <img src="OBJ_IMURL"
+                    class="w-100 h-100 object-fit-cover position-absolute img-fluid wow animate__animated animate__fadeIn"
+                    alt="">
             </a>
-            <div class="info position-absolute fz-12 text-light p-2">
+            <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn" data-wow-duration="0.5s">
                 <div class="line">OBJ_TITLE</div>
                 <div class="line d-flex justify-content-between">
                     <div class="line">相片擁有者：OBJ_AUTHOR</div>
-                    <div class="line"><i class="fa fa-star-o" aria-hidden="true"></i>LIKE_NUM</div>
-                    <div class="line"><i class="fa fa-comment-o" aria-hidden="true"></i>COMMENT_NUM</div>
+                    <div class="line"><i class="fa fa-star-o mx-1" aria-hidden="true"></i>LIKE_NUM</div>
+                    <div class="line"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>COMMENT_NUM</div>
                 </div>
             </div>
         </div>

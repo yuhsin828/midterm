@@ -3,6 +3,9 @@
     background: #212529;
 }
 
+.wz-60{
+    width: 60px;
+}
 .wz-85{
     width: 85px;
 }
@@ -161,11 +164,12 @@ aside .nav .nav-item .nav-link:hover{
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
-    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .5));
+    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .7));
 }
 .info .line3{
     display: none;
 }
 .imgbox:hover .info .line3{
     display: block;
+    transition: .5s;
 }

@@ -6,6 +6,10 @@ $(document).ready(function () {
     getData();
 });
 
+$(function () {
+    new WOW().init();
+});
+
 function getData() {
     let param = {};
     param.method = 'getFakeAPI';
@@ -48,7 +52,7 @@ function theader(ALBUM_IMGURL, ALBUM_NAME, ALBUM_INFO, PHOTO_NUM, VIEW_NUM, AUTH
     let html =
         `
         <div class="row h-100 position-relative">
-            <img src="https://images.pexels.com/photos/${ALBUM_IMGURL}/pexels-photo-${ALBUM_IMGURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="h-100 object-fit-cover position-absolute p-0 img-fluid" alt="">
+            <img src="https://images.pexels.com/photos/${ALBUM_IMGURL}/pexels-photo-${ALBUM_IMGURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="h-100 object-fit-cover position-absolute p-0 img-fluid wow animate__animated animate__fadeIn" alt="">
                 <div class="black-mask h-100 position-absolute"></div>
                 <div class="info position-absolute text-light text-center m-auto">
                     <div class="fz-28 pb-2">${ALBUM_NAME}</div>
@@ -60,9 +64,9 @@ function theader(ALBUM_IMGURL, ALBUM_NAME, ALBUM_INFO, PHOTO_NUM, VIEW_NUM, AUTH
                     </div>
                     <div class="">
                         <a href="#"><img src="${AUTHOR_IMG}"
-                            class="wz-85 rounded-circle img-fluid" alt=""></a>
+                            class="wz-85 rounded-circle img-fluid pb-2" alt=""></a>
                     </div>
-                    <div class="fz-14">相片擁有者:${ALBUM_AUTHOR}</div>
+                    <div class="fz-14">相片擁有者：${ALBUM_AUTHOR}</div>
                 </div>
         </div>
         `;
@@ -75,14 +79,14 @@ function tsection(OBJ_IMURL, OBJ_TITLE, OBJ_AUTHOR, LIKE_NUM, COMMENT_NUM) {
         <div class="col-xl-4 col-md-6 pt-1 px-1">
             <div class="imgbox position-relative hz-320">
                 <a class="img position-absolute" href="#">
-                    <img src="https://images.pexels.com/photos/${OBJ_IMURL}/pexels-photo-${OBJ_IMURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="w-100 h-100 object-fit-cover position-absolute img-fluid" alt="">
+                    <img src="https://images.pexels.com/photos/${OBJ_IMURL}/pexels-photo-${OBJ_IMURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="w-100 h-100 object-fit-cover position-absolute img-fluid wow animate__animated animate__fadeIn" alt="">
                 </a>
-                <div class="info position-absolute fz-12 text-light p-2">
+                <div class="info position-absolute fz-12 text-light p-2 wow animate__animated animate__fadeIn" data-wow-duration="0.5s">
                     <div class="line">${OBJ_TITLE}</div>
                     <div class="line d-flex justify-content-between">
                         <div class="line">相片擁有者：${OBJ_AUTHOR}</div>
-                        <div class="line"><i class="fa fa-star-o" aria-hidden="true"></i>${LIKE_NUM}</div>
-                        <div class="line"><i class="fa fa-comment-o" aria-hidden="true"></i>${COMMENT_NUM}</div>
+                        <div class="line"><i class="fa fa-star-o mx-1" aria-hidden="true"></i>${LIKE_NUM}</div>
+                        <div class="line"><i class="fa fa-comment-o mx-1" aria-hidden="true"></i>${COMMENT_NUM}</div>
                     </div>
                 </div>
             </div>
