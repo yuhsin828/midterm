@@ -1,6 +1,6 @@
 ::selection {
     color: #f8f9fa;
-    background: #212529;
+    background: #202023;
 }
 
 .wz-60{
@@ -60,7 +60,7 @@
     background-color: #202023;
 }
 .bg-flickrlight{
-    background-color: #d0d0d1;
+    background-color: #F3F5F6;
 }
 
 .icon-flickr_logo_dots{
@@ -171,5 +171,4 @@ aside .nav .nav-item .nav-link:hover{
 }
 .imgbox:hover .info .line3{
     display: block;
-    transition: .5s;
 }

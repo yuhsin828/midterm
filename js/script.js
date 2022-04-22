@@ -44,7 +44,7 @@ function t01(ALBUM_ID, ALBUM_IMGURL, ALBUM_NAME, PHOTO_NUM, VIEW_NUM) {
                 <a class="img position-absolute" href="./album_field.html?${ALBUM_ID}">
                     <img src="https://images.pexels.com/photos/${ALBUM_IMGURL}/pexels-photo-${ALBUM_IMGURL}.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="w-100 h-100 object-fit-cover position-absolute img-fluid wow animate__animated animate__fadeIn" alt="">
                 </a>
-                <div class="info position-absolute fz-16 p-2 text-light">
+                <div class="info position-absolute fz-14 fw-bolder p-2 text-light">
                     <div class="line line1">${ALBUM_NAME}</div>
                     <div class="line line2">${PHOTO_NUM}張相片，${VIEW_NUM}次檢視</div>
                     <div class="line line3 text-end">

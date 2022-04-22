@@ -1,6 +1,6 @@
 ::selection {
     color: #f8f9fa;
-    background: #212529;
+    background: #202023;
 }
 
 .wz-85 {
@@ -80,7 +80,7 @@
 }
 
 .bg-flickrlight {
-    background-color: #d0d0d1;
+    background-color: #F3F5F6;
 }
 
 .icon-flickr_logo_dots {
@@ -123,9 +123,8 @@ nav .hover-color:hover {
 .headerimg{
     background-size: cover;
     background-position: center center;
-}
-header .black-mask {
     background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: multiply;
 }
 header .info {
     position: absolute;
@@ -166,7 +165,7 @@ section .info{
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
-    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .5));
+    background-image: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .7));
     display: none;
 }
 .field:hover .info{
@@ -189,4 +188,5 @@ section .info{
 .field {
     background-size: cover;
     background-position: center center;
+    background-image: linear-gradient(rgba(0, 144, 220, .3), rgba(0, 144, 220, .9));
 }
